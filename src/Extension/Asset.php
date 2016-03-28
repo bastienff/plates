@@ -78,9 +78,9 @@ class Asset implements ExtensionInterface
         }
 
         if ($this->filenameMethod) {
-            return Config::path . $directory . $pathInfo['filename'] . '.' . $lastUpdated . '.' . $pathInfo['extension'];
+            return Config::getPath() . $directory . $pathInfo['filename'] . '.' . $lastUpdated . '.' . $pathInfo['extension'];
         } else {
-            return Config::path . $directory . $pathInfo['filename'] . '.' . $pathInfo['extension'] . '?v=' . $lastUpdated;
+            return Config::getPath() . $directory . $pathInfo['filename'] . '.' . $pathInfo['extension'] . '?v=' . $lastUpdated;
         }
 
         return $directory . $pathInfo['filename'] . '.' . $pathInfo['extension'] . '?v=' . $lastUpdated;
